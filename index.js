@@ -2,8 +2,8 @@ const Instagram = require('node-instagram').default;
 const express = require('express');
 
 const instagram = new Instagram({
-  clientId: '22bd2e47d25241b9b62d61cf4f70bf3d',
-  clientSecret: '346f20d4d71a44c1b0d411b7baeba743',
+  clientId: '<yourClientID>',
+  clientSecret: '<yourClientSecret>',
 });
 
 const redirectUri = 'http://localhost:3000/auth/instagram/callback';
