@@ -22,8 +22,6 @@ app.get('/auth/instagram/callback', async (req, res) => {
        return {followers: result.data.counts.followed_by, userName: result.data.username, _id: result.data._id, img: result.data.profile_picture};
     });
     instagram.get('users/self/media/recent', { access_token: response.access_token }).then(result => {
-        let recentPhoto = result.data[0].id;
-        console.log(recentPhoto);
         let percent = result.data.map(x=>{
             return (parseInt(x.likes.count) / parseInt(user.followers)).toFixed(2);
         });
